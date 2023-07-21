@@ -4,7 +4,6 @@
 
 
 
-
 # Checks and adjusts for valid ASCII characters
 
 def ascii_check(value):
@@ -55,4 +54,4 @@ def extend(password):
         password += password[::-1]
     return password
 
-print(encrypt(extend("password"),"","google.com"))
+    
