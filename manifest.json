@@ -2,7 +2,7 @@
     "name": "Password Generator",
     "version": "0.1.0",
     "description": "Generates unique passwords for different websites",
-    "permissions": ["activeTab"],
+    "permissions": ["tabs"],
     "action": {
         "default_popup": "index.html"
       },

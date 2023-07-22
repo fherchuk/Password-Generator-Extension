@@ -2,72 +2,35 @@
 <html lang="en">
 
   <head>
-    <meta http-equiv="Content-Security-Policy" content="form-action 'unsafe-inline'" />
-
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
-    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-
-    <py-env>
-        - paths:
-          - /generator.py
-    </py-env>
     <title>Password Generator</title>
 </head>
 <style>
-    input[type=text], select {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-    
-    input[type=submit] {
-      width: 100%;
-      background-color: #4c4faf;
-      color: white;
-      padding: 14px 20px;
-      margin: 8px 0;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-    
-    input[type=submit]:hover {
-      background-color: #45a049;
-    }
-    
-    p {
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      padding: 20px;
-    }
-  </style>
+  button[id=submit]{
+    width: 40%;
+    height:30px;
+    background-color: rgb(37, 139, 62);
+    color: white;
+    border:none;
+    border-radius: 12px;
+  }
+  button[id=submit]:hover{
+    background-color: limegreen;
+  }
+</style>
 <body>
-    <h1>Password Generator</h1>
-    <form onsubmit="return false">
-        <label for="plaintext">Enter Password:</label><br>
-        <input type="text" id="plaintext" name="plaintext"><br>
-        <input pys-onClick="sub" type="submit" id="btn-form" value="submit">
-    </form>
+  <form>
+    <lavel for="plaintext">Enter Password:</lavel><br>
+    <input type="text" id="plaintext" name="plaintext"><br><br>
+    <button id="submit" type="button">Submit</button>
+  </form>
+  <p id="check" color="green"></p>
+  <p id="output"></p>
 
-    <p>Your new password is:</p>
-    <p id='output'></p>
 
-<py-script>
-import generator
-  
-def sub(*args,**kwargs):
-  result_place = Element('output')
-  result_place.write(encrypt(extend(Element('plaintext').value,"","Google.com")))
-</py-script>
-    
+
+
+<script src="popup.js"></script> 
 </body>
 </html>

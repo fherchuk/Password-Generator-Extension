@@ -20,14 +20,6 @@ def cycle(keyword):
     tail += head
     return tail
 
-# Converts list to a string
-
-def list_to_string(char_list):
-    new_string = ""
-    for element in char_list:
-        new_string.join(element)
-    return new_string
-
 # Converts single character of plaintext string into cipher text character
 
 def encode(letter, keyword):
@@ -54,4 +46,4 @@ def extend(password):
         password += password[::-1]
     return password
 
-    
+print(encrypt(extend("password"),"","google.com"))
