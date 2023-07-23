@@ -4,7 +4,7 @@
     "description": "Generates unique passwords for different websites",
     "permissions": ["tabs"],
     "action": {
-        "default_popup": "index.html"
+        "default_popup": "popup.html"
       },
     "manifest_version": 3
 }
