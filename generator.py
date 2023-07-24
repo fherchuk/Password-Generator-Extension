@@ -47,6 +47,3 @@ def extend(password):
     if len(password) < 16:
         password += password[::-1]
     return password
-
-
-print(encrypt(extend("password"), "", "google.com"))
