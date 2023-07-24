@@ -13,12 +13,14 @@ def ascii_check(value):
 
 # Cycles through string and places current head at the tail.
 
+
 def cycle(keyword):
     head, *tail = keyword
     tail += head
     return tail
 
 # Converts single character of plaintext string into cipher text character
+
 
 def encode(letter, keyword):
     asc_num = (ord(letter) * ord(keyword[0])) % 128
@@ -27,6 +29,7 @@ def encode(letter, keyword):
     return chr(asc_num), keyword
 
 # Recursively loops through plaintext string to convert and return full ciphertext string
+
 
 def encrypt(plaintext, ciphertext, keyword):
     if len(plaintext) == 0:
@@ -39,9 +42,11 @@ def encrypt(plaintext, ciphertext, keyword):
 
 # Returns mirrored plaintext extension if length condition is not met.
 
+
 def extend(password):
     if len(password) < 16:
         password += password[::-1]
     return password
 
-print(encrypt(extend("password"),"","google.com"))
+
+print(encrypt(extend("password"), "", "google.com"))
