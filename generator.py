@@ -2,8 +2,6 @@
 # pylint: disable=missing-class-docstring
 # pylint: disable=missing-function-docstring
 
-
-
 # Checks and adjusts for valid ASCII characters
 
 def ascii_check(value):
