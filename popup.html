@@ -4,26 +4,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="popup.css">
     <title>Password Generator</title>
 </head>
-<style>
-  button[id=submit]{
-    width: 40%;
-    height:30px;
-    background-color: rgb(42, 65, 168);
-    color: white;
-    border:none;
-    border-radius: 12px;
-  }
-  button[id=submit]:hover{
-    background-color:  rgb(14, 28, 87);
-  }
-</style>
-<body>
   <form autocomplete="off">
-    <lavel for="plaintext">Enter Password:</lavel><br>
+    <label for="plaintext">Enter Password:</label><br>
     <input type="password" id="plaintext" name="plaintext"><br><br>
-    <button id="submit" type="button">Submit</button>
+    <input type="button" class="button" id="submit" value="Submit">
   </form>
   <p id="check" color="green"></p>
   <p id="output"></p>

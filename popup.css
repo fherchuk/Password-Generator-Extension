@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.button {
+    background-color: #1c3dcf;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+  }
+.button:hover {
+    background-color: #0d1c5c;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
