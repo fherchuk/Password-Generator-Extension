@@ -7,15 +7,34 @@
     <link rel="stylesheet" type="text/css" href="popup.css">
     <title>Password Generator</title>
 </head>
-  <form autocomplete="off">
-    <label for="plaintext">Enter Password:</label><br>
-    <input type="password" id="plaintext" name="plaintext"><br><br>
-    <input type="button" class="button" id="submit" value="Submit">
-  </form>
-  <p id="check" color="green"></p>
-  <p id="output"></p>
-  <p id="test"></p>
 
+
+
+
+<div class="form">
+  <div class="title">Welcome</div>
+  <div class="subtitle">Password Generator</div>
+  
+  <div class="input-container ic1">
+    <input id="plaintext" class="input" type="password" placeholder='' />
+    <div class="cut"></div>
+    <label for="plaintext" class="placeholder">Enter password</label>
+  </div>
+  <br><br>
+  
+  <div class="input-container ic2">
+    <input id="keyword" class="input" type="text" placeholder=" " />
+    <div class="cut"></div>
+    <label for="website" id="website" class="placeholder">Enter website</label>
+  </div>
+
+  <button type="text" id="submit" class=submit>submit</button>
+
+  <div class="output">
+    <label for="check" id="check"></label><br>
+    <label for="output" id="output"></label>
+  </div>
+</div>
 
 
 <script src="popup.js"></script> 

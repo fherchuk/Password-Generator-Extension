@@ -67,9 +67,17 @@ function getHostName (url) {
 function getPlaintext () {
   getCurrentTabUrl().then(function (value) { displayUrl(value) })
   const plaintext = document.getElementById('plaintext').value
-  document.getElementById('output').innerHTML = encrypt(extend(plaintext), '', currentURL)
-  document.getElementById('check').innerHTML = currentURL
+  const keyword = document.getElementById('keyword').value
+  document.getElementById('output').innerHTML = encrypt(extend(plaintext), '', keyword)
+  document.getElementById('check').innerHTML = 'Your New Password!'
+}
+
+function autoFill () {
+  if (document.getElementById('keyword').value === '') {
+    document.getElementById('keyword').value = currentURL
+  }
 }
 
 document.getElementById('submit').addEventListener('click', getPlaintext)
+document.getElementById('keyword').addEventListener('click', autoFill)
 getCurrentTabUrl().then(function (value) { displayUrl(value) })
