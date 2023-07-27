@@ -81,3 +81,16 @@ function autoFill () {
 document.getElementById('submit').addEventListener('click', getPlaintext)
 document.getElementById('keyword').addEventListener('click', autoFill)
 getCurrentTabUrl().then(function (value) { displayUrl(value) })
+
+const eyeicon = document.getElementById('eyeicon')
+const plaintext = document.getElementById('plaintext')
+
+eyeicon.onclick = function () {
+  if (plaintext.type === 'password') {
+    plaintext.type = 'text'
+    eyeicon.src = 'imgs/eye-fill.png'
+  } else {
+    plaintext.type = 'password'
+    eyeicon.src = 'imgs/eye-off.png'
+  }
+}
