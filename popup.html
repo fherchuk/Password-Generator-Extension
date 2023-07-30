@@ -10,38 +10,34 @@
 
 
 
-
-<div class="form">
-  <div class="title">Welcome</div>
-  <div class="subtitle">Password Generator</div>
-  
-  <div class="input-container ic1">
-    <input id="plaintext" class="input" type="password" placeholder=" "/>
-    <img src="imgs/eye-off.png" id="eyeicon">
-    <div class="cut"></div>
-    <label for="plaintext" class="placeholder">Enter password</label>
-  </div>
-  <br><br>
-  
-  <div class="input-container ic2">
-    <input id="keyword" class="input" type="text" placeholder=" "/>
-    <div class="cut"></div>
-    <label for="website" id="website" class="placeholder">Enter website</label>
-  </div>
-
-  <button type="text" id="submit" class="submit">submit</button><br>
-
-
-  <div class="output-container">
-    <button class="copy" id="copy" type="button" disabled>copy</button>
+<body>
+  <div class="form">
+    <div class="title">Welcome</div>
+    <div class="subtitle">Password Generator</div>
     
+    <div class="input-container ic1">
+      <input id="plaintext" class="input" type="password" placeholder=" "/>
+      <img src="imgs/eye-off.png" id="eyeicon">
+      <div class="cut"></div>
+      <label for="plaintext" class="placeholder">Enter password</label>
+    </div>
+    <br><br>
     
-    <label for="check" id="check"></label><br>
-    <label for="output" id="output"></label>
+    <div class="input-container ic2">
+      <input id="keyword" class="input" type="text" placeholder=" "/>
+      <div class="cut"></div>
+      <label for="website" id="website" class="placeholder">Enter website</label>
+    </div>
+
+    <button type="text" id="submit" class="submit">submit</button><br>
+
+
+    <div class="output-container">    
+      <input id ="output" class="input" type="text" placeholder=" "/>
+    </div>
   </div>
-</div>
 
 
-<script src="popup.js"></script> 
+  <script src="popup.js"></script> 
 </body>
 </html>
