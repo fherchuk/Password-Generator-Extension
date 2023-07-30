@@ -70,6 +70,7 @@ function getPlaintext () {
   const keyword = document.getElementById('keyword').value
   document.getElementById('output').innerHTML = encrypt(extend(plaintext), '', keyword)
   document.getElementById('check').innerHTML = 'Your New Password!'
+  document.getElementById('copy').disabled = false
 }
 
 function autoFill () {
@@ -84,6 +85,7 @@ getCurrentTabUrl().then(function (value) { displayUrl(value) })
 
 const eyeicon = document.getElementById('eyeicon')
 const plaintext = document.getElementById('plaintext')
+const copyButton = document.getElementById('copy')
 
 eyeicon.onclick = function () {
   if (plaintext.type === 'password') {
@@ -93,4 +95,8 @@ eyeicon.onclick = function () {
     plaintext.type = 'password'
     eyeicon.src = 'imgs/eye-off.png'
   }
+}
+
+copyButton.onclick = function () {
+  navigator.clipboard.writeText(document.getElementById('website').value)
 }
