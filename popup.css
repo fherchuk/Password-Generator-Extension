@@ -96,7 +96,7 @@ body {
 }
 
 .input:focus ~ .cut,
-.input:not(:placeholder-shown) ~.cut {
+.input:not(:placeholder-shown) ~ .cut {
   transform: translateY(8px);
 }
 
@@ -113,18 +113,17 @@ body {
 }
 
 .input:focus ~ .placeholder,
-.input:not(:placeholder-shown) ~.placeholder {
+.input:not(:placeholder-shown) ~ .placeholder {
   transform: translateY(-30px) translateX(10px) scale(0.75);
 }
 
-.input:not(:placeholder-shown)~.placeholder {
+.input:not(:placeholder-shown) ~ .placeholder {
   color: #808097;
 }
 
-.input:focus~.placeholder {
+.input:focus ~ .placeholder {
   color: #dc2f55;
 }
-
 
 .submit {
   background-color: #1c3dcf;
@@ -143,7 +142,7 @@ body {
 
 .submit:hover {
   background-color: #0d1c5c;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 20%), 0 6px 20px 0 rgba(0, 0, 0, 19%);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .output-container {
