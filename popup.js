@@ -67,9 +67,29 @@ function getHostName (url) {
 function getPlaintext () {
   getCurrentTabUrl().then(function (value) { displayUrl(value) })
   const plaintext = document.getElementById('plaintext').value
-  document.getElementById('output').innerHTML = encrypt(extend(plaintext), '', currentURL)
-  document.getElementById('check').innerHTML = currentURL
+  const keyword = document.getElementById('keyword').value
+  document.getElementById('output').value = encrypt(extend(plaintext), '', keyword)
+}
+
+function autoFill () {
+  if (document.getElementById('keyword').value === '') {
+    document.getElementById('keyword').value = currentURL
+  }
 }
 
 document.getElementById('submit').addEventListener('click', getPlaintext)
+document.getElementById('keyword').addEventListener('click', autoFill)
 getCurrentTabUrl().then(function (value) { displayUrl(value) })
+
+const eyeicon = document.getElementById('eyeicon')
+const plaintext = document.getElementById('plaintext')
+
+eyeicon.onclick = function () {
+  if (plaintext.type === 'password') {
+    plaintext.type = 'text'
+    eyeicon.src = 'imgs/eye-fill.png'
+  } else {
+    plaintext.type = 'password'
+    eyeicon.src = 'imgs/eye-off.png'
+  }
+}
