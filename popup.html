@@ -7,14 +7,13 @@
     <link rel="stylesheet" type="text/css" href="popup.css">
     <title>Password Generator</title>
 </head>
-
-
-
 <body>
   <div class="form">
-    <div class="title">Welcome</div>
-    <div class="subtitle">Password Generator</div>
-    
+    <div class="headerbox">
+      <div class="title">Password Generator</div>
+      <img src="imgs/icon-64.png" id="logo" alt="Logo">
+    </div>
+
     <div class="input-container ic1">
       <input id="plaintext" class="input" type="password" placeholder=" "/>
       <img src="imgs/eye-off.png" id="eyeicon" alt="Eye">
@@ -29,14 +28,14 @@
       <label for="website" id="website" class="placeholder">Enter website</label>
     </div>
 
-    <button type="text" id="submit" class="submit">submit</button><br>
-
+    <button type="text" id="submit" class="submit">Generate</button><br><br>
 
     <div class="output-container">    
       <input id ="output" class="input" type="text" placeholder=" "/>
     </div>
+    
+    <br><br><br><label for="version" id="version" class="version">1.1.0</label> 
   </div>
-
 
   <script src="popup.js"></script> 
 </body>
