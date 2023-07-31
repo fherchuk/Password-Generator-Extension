@@ -142,7 +142,6 @@ body {
 
 .submit:hover {
   background-color: #0d1c5c;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .output-container {
