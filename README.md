@@ -27,7 +27,7 @@ The purpose of this application is to allow users to create unique log-ins using
 
 Runs on any of the following browsers
 
-<img src="https://www.vectorlogo.zone/logos/opera/opera-icon.svg" alt="opera" width="40" height="40"/> <img src="https://www.vectorlogo.zone/logos/google_chrome/google_chrome-icon.svg" alt="chrome" width="40" height="40"/> <img src="https://www.vectorlogo.zone/logos/microsoft_edge/microsoft_edge-icon.svg" alt="edge" width="40" height="40"/> <img src="https://www.vectorlogo.zone/logos/firefox/firefox-icon.svg" alt="firefox" width="40" height="40"/> 
+<img src="https://www.vectorlogo.zone/logos/opera/opera-icon.svg" alt="opera" width="40" height="40"/> <img src="https://www.vectorlogo.zone/logos/google_chrome/google_chrome-icon.svg" alt="chrome" width="40" height="40"/> <img src="https://www.vectorlogo.zone/logos/microsoft_edge/microsoft_edge-icon.svg" alt="edge" width="40" height="40"/> <img src="https://www.vectorlogo.zone/logos/firefox/firefox-icon.svg" alt="firefox" width="40" height="40"/>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
