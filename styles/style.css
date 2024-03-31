@@ -17,7 +17,7 @@ body {
   background-color: #15172b;
   border-color: #dc2f55;
   box-sizing: border-box;
-  height: 500px;
+  height: 550px;
   padding: 20px;
   width: 320px;
 }
@@ -128,7 +128,7 @@ body {
   color: #dc2f55;
 }
 
-.submit {
+.button {
   background-color: #1c3dcf;
   border: none;
   border-radius: 8px;
@@ -137,13 +137,13 @@ body {
   cursor: pointer;
   font-size: 18px;
   height: 50px;
-  margin-top: 38px;
+  margin-top: 15px;
   outline: 0;
   text-align: center;
   width: 100%;
 }
 
-.submit:hover {
+.button:hover {
   background-color: #0d1c5c;
 }
 
@@ -165,8 +165,17 @@ body {
   outline: 0;
   font-size: 24px;
 }
+.copy{
+  font-size: 14px;
+  color: #dc2f55;
+  font-family: sans-serif;
+}
 
 .version{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
   color: #303245;
   font-size: 10px;
   font-family: sans-serif;
