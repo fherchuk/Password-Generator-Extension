@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="popup.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
     <title>Password Generator</title>
-</head>
-<body>
-  <div class="form">
-    <div class="headerbox">
-      <div class="title">Password Generator</div>
-      <img src="imgs/icon-64.png" id="logo" alt="Logo">
+  </head>
+  <body>
+    <div class="form">
+      <div class="headerbox">
+        <div class="title">Password Generator</div>
+        <img src="imgs/icon-64.png" id="logo" alt="Logo" />
+      </div>
+
+      <div class="input-container ic1">
+        <input id="plaintext" class="input" type="password" placeholder=" " />
+        <img src="imgs/eye-off.png" id="eyeicon" alt="Eye" />
+        <div class="cut"></div>
+        <label for="plaintext" class="placeholder">Enter password</label>
+      </div>
+      <br /><br />
+
+      <div class="input-container ic2">
+        <input id="keyword" class="input" type="text" placeholder=" " />
+        <div class="cut"></div>
+        <label for="website" id="website" class="placeholder"
+          >Enter website</label
+        >
+      </div>
+
+      <button type="text" id="submit" class="button">Generate</button>
+      <button type="text" id="copy" class="button">Copy</button>
+      <br />
+
+      <div class="output-container">
+        <input id="output" class="input" type="text" placeholder=" " />
+      </div>
+      <p id="copy-confirm" class="copy"></p>
+
+      <br /><br /><br /><label for="version" id="version" class="version"
+        >1.2.0</label
+      >
     </div>
 
-    <div class="input-container ic1">
-      <input id="plaintext" class="input" type="password" placeholder=" "/>
-      <img src="imgs/eye-off.png" id="eyeicon" alt="Eye">
-      <div class="cut"></div>
-      <label for="plaintext" class="placeholder">Enter password</label>
-    </div>
-    <br><br>
-    
-    <div class="input-container ic2">
-      <input id="keyword" class="input" type="text" placeholder=" "/>
-      <div class="cut"></div>
-      <label for="website" id="website" class="placeholder">Enter website</label>
-    </div>
-
-    <button type="text" id="submit" class="submit">Generate</button><br><br>
-
-    <div class="output-container">    
-      <input id ="output" class="input" type="text" placeholder=" "/>
-    </div>
-    
-    <br><br><br><label for="version" id="version" class="version">1.1.0</label> 
-  </div>
-
-  <script src="popup.js"></script> 
-</body>
+    <script src="scripts/script.js"></script>
+  </body>
 </html>
