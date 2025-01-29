@@ -3,7 +3,12 @@ A browser extension for an automatic password generator
 
 [![GitHub Super-Linter](https://github.com/fherchuk/PasswordGenBrowserExtension/actions/workflows/super-linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
+
+<img src="./imgs/generator.png">
+
 ## About
+
+
 
 This extension came about as an individual summer project to learn and develop JS, CSS, and HTML skills. What started as a bit of python code, slowly transformed into a simple and usable browser extension for creating and managing unique passwords across multiple sites.
 

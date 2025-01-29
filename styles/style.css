@@ -3,14 +3,18 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 body {
-  align-items: center;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 315px;
+  height: 500px;
+  overflow: hidden;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 .form {
@@ -91,7 +95,7 @@ body {
   top: -20px;
   transform: translateY(0);
   transition: transform 200ms;
-  width: 76px;
+  width: 100px;
 }
 
 .cut-short {
