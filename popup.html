@@ -4,44 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <title>Password Generator</title>
+    <title>eNCrypted Password Generator</title>
   </head>
   <body>
-    <div class="form">
-      <div class="headerbox">
-        <div class="title">Password Generator</div>
-        <img src="imgs/icon-64.png" id="logo" alt="Logo" />
+      <div class="form">
+          <div class="headerbox">
+              <div class="left-header">
+                  <div class="hburger-box" id="hburger">
+                      <div class="bar1"></div>
+                      <div class="bar2"></div>
+                      <div class="bar3"></div>
+                  </div>
+                  <div class="title">KeyWeaver</div>
+              </div>
+              <img class="logo" src="imgs/icon-64.png" id="logo" alt="Logo" />
+          </div>
+          <div class="input-full">
+              <div class="input-container ic1">
+                  <input id="plaintext" class="input" type="password" placeholder=" " />
+                  <img src="imgs/eye-off.png" id="eyeicon" alt="Eye" />
+                  <div class="cut"></div>
+                  <label for="plaintext" class="placeholder">Enter password</label>
+              </div>
+
+              <div class="input-container ic2">
+                  <input id="keyword" class="input" type="text" placeholder=" " />
+                  <div class="cut"></div>
+                  <label for="website" id="website" class="placeholder">Enter website</label>
+              </div>
+          </div>
+          <label for="options">Length:</label>
+          <select id="options" name="options">
+              <option value="option1">8 Characters</option>
+              <option value="option2">12 Characters</option>
+              <option value="option3">16 Characters</option>
+          </select>
+          <label>
+              <input type="checkbox" name="option1" value="Option1"> Use Special Characters
+          </label>
+          <button type="text" id="submit" class="button">Generate</button>
+          <button type="text" id="copy" class="button">Copy</button>
+          <br />
+
+          <div class="output-container">
+              <input id="output" class="input" type="text" placeholder="" />
+          </div>
+          <p id="copy-confirm" class="copy"></p>
+          <label for="version" id="version" class="version">1.2.0</label>
       </div>
-
-      <div class="input-container ic1">
-        <input id="plaintext" class="input" type="password" placeholder=" " />
-        <img src="imgs/eye-off.png" id="eyeicon" alt="Eye" />
-        <div class="cut"></div>
-        <label for="plaintext" class="placeholder">Enter password</label>
-      </div>
-      <br /><br />
-
-      <div class="input-container ic2">
-        <input id="keyword" class="input" type="text" placeholder=" " />
-        <div class="cut"></div>
-        <label for="website" id="website" class="placeholder"
-          >Enter website</label
-        >
-      </div>
-
-      <button type="text" id="submit" class="button">Generate</button>
-      <button type="text" id="copy" class="button">Copy</button>
-      <br />
-
-      <div class="output-container">
-        <input id="output" class="input" type="text" placeholder="" />
-      </div>
-      <p id="copy-confirm" class="copy"></p>
-
-      <br /><br /><br /><label for="version" id="version" class="version"
-        >1.2.0</label
-      >
-    </div>
 
     <script src="scripts/script.js"></script>
   </body>
