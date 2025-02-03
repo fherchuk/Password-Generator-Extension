@@ -13,8 +13,8 @@
 body {
     margin: 0;
     padding: 0;
-    width: 500px;
-    height: 315px;
+    width: 350px;
+    height: 350px;
     overflow: hidden;
 }
 
@@ -70,8 +70,8 @@ body {
     background-color: #EDEDED;
     border-color: var(--main-color);
     box-sizing: border-box;
-    height: 500px;
-    width: 450px;
+    height: 350px;
+    width: 350px;
 }
 
 
@@ -82,23 +82,22 @@ body {
   margin-left: 20px;
 }
 
-.input-full{
+.input-main{
+    width: 100%;
     display:flex;
-    margin-top: 25px; 
-    justify-content: center;
+    flex-direction:column;
     align-items: center;
-    gap: 20px;
-
+    justify-content: center;
 
 }
-.input-container {
-  border: 2px solid #555;
-  height: 50px;
-  position: relative;
-  width: 45%;
-  display: flex;
-  align-items: center;
 
+.input-container {
+    border-radius: 6px;
+    border: 3px solid var(--main-color);
+    margin-top: 10px;
+    height: 40px;
+    position: relative;
+    width: 85%;
 }
 
 
@@ -115,25 +114,19 @@ body {
   cursor: pointer;
 }
 
-.ic1 {
 
-}
-.ic2 {
-    
-}
 
 
 
 .input {
 
-  border-radius: 12px;
   border: 0;
   box-sizing: border-box;
   color: black;
   font-size: 20px;
   height: 100%;
   outline: 0;
-  padding: 4px 20px 0;
+  padding: 4px 5px 0;
   width: 50%;
 }
 
@@ -164,7 +157,7 @@ body {
   color: #65657b;
   font-family: sans-serif;
   left: 20px;
-  line-height: 14px;
+  line-height: 2px;
   pointer-events: none;
   position: absolute;
   transform-origin: 0 50%;
@@ -174,7 +167,7 @@ body {
 
 .input:focus ~ .placeholder,
 .input:not(:placeholder-shown) ~ .placeholder {
-  transform: translateY(-30px) translateX(10px) scale(0.75);
+  transform: translateY(-25px) translateX(10px) scale(0.75);
 }
 
 .input:not(:placeholder-shown) ~ .placeholder {
@@ -185,6 +178,34 @@ body {
   color: var(--main-color);
 }
 
+
+.options-container{
+    margin-top: 20px;
+    display: flex;
+}
+.menu-container {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+
+}
+.checkbox-container {
+    display: grid;
+    gap: 20px;
+    padding-right: 20px;
+    justify-items: end;
+    grid-template-columns: 1fr;
+    width: 100%;
+
+}
+.button-container {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 .button {
     background-color: var(--main-color);
     border: none;
@@ -194,7 +215,6 @@ body {
     cursor: pointer;
     font-size: 18px;
     height: 50px;
-    margin-top: 15px;
     outline: 0;
     text-align: center;
     width: 45%;
@@ -205,15 +225,17 @@ body {
     }
 
 .output-container {
-  background-color: #303245;
-  border-radius: 12px;
-  height: 50px;
-  position: relative;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 12px;
+    height: 50px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
 }
+
 
 .output-container input {
   width: 100%;
@@ -222,11 +244,88 @@ body {
   outline: 0;
   font-size: 24px;
 }
-.copy{
-  font-size: 14px;
-  color: #dc2f55;
-  font-family: sans-serif;
+.copy {
+    max-width: 30px;
+    height: auto;
+    margin-left: auto;
+    margin-right: 20px;
 }
+
+
+
+.menu{
+    border-color: var(--main-color);
+    cursor: pointer;
+    width: 150px;
+    padding-left: 5px;
+    font-size:14px;
+}
+menu:focus{
+    border: 2px solid var(--main-color);
+}
+menu::after{
+    content: '';
+}
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 18px;
+}
+
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch-label {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--main-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+}
+
 
 .version{
   bottom: 0;

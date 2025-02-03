@@ -90,9 +90,7 @@ function copyToClipboard() {
         });
 }
 
-function transformBurger() {
-    this.classList.toggle("change");
-}
+
 
 document.getElementById("eyeicon").addEventListener("click", function () {
     const plaintext = document.getElementById("plaintext");
@@ -106,6 +104,11 @@ document.getElementById("eyeicon").addEventListener("click", function () {
 document.getElementById("submit").addEventListener("click", generatePassword);
 document.getElementById("copy").addEventListener("click", copyToClipboard);
 document.getElementById("keyword").addEventListener("click", autoFill);
-document.getElementById("hburger").addEventListener("click", transformBurger);
+
+
+document.getElementById("hburger-box").addEventListener("click", (e) => {
+    e.currentTarget.classList.toggle("change");
+});
+
 
 autoFill();
