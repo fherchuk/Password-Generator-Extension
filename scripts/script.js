@@ -46,10 +46,13 @@ async function encrypt(plaintext, keyword) {
 
 
 async function generatePassword() {
-    document.getElementById("copy-confirm").innerText = "";
     const plaintext = document.getElementById("plaintext").value;
     const keyword = document.getElementById("keyword").value;
-    document.getElementById("output").value = await encrypt(plaintext, keyword);
+    if (plaintext.length > 0 && keyword.length > 0) {
+        document.getElementById("output").value = await encrypt(plaintext, keyword);
+    } else {
+        document.getElementById("output").value = "";
+    } 
 }
 
 
@@ -101,14 +104,12 @@ document.getElementById("eyeicon").addEventListener("click", function () {
 });
 
 // Event listeners
-document.getElementById("submit").addEventListener("click", generatePassword);
-document.getElementById("copy").addEventListener("click", copyToClipboard);
 document.getElementById("keyword").addEventListener("click", autoFill);
-
+document.getElementById("keyword").addEventListener("input", generatePassword);
+document.getElementById("plaintext").addEventListener("input", generatePassword);
 
 document.getElementById("hburger-box").addEventListener("click", (e) => {
     e.currentTarget.classList.toggle("change");
 });
-
 
 autoFill();
