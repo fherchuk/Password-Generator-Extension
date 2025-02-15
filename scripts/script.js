@@ -1,12 +1,10 @@
-/* global chrome */
-
 function convertAscii(array) {
     for (let i = 0; i < array.length; i++) {
         let value = array[i] / 2;
         if (value < 32) {
             value += 32;
         }
-        if (value === 127) {
+        if (value >= 127) {
             value -= 1;
         }
         array[i] = value;
@@ -36,21 +34,27 @@ async function encrypt(plaintext, keyword) {
             hash: "SHA-256"       
         },
         hashed,
-        128 
+        128
     );
-
     const hashArray = convertAscii(Array.from(new Uint8Array(key)));
     console.log(hashArray);
+    console.log(hashArray.length);
     return String.fromCharCode(...hashArray);
 }
 
-
 async function generatePassword() {
-    document.getElementById("copy-confirm").innerText = "";
     const plaintext = document.getElementById("plaintext").value;
     const keyword = document.getElementById("keyword").value;
-    document.getElementById("output").value = await encrypt(plaintext, keyword);
+    const menu_value = parseInt(document.getElementById("menu").value);
+
+    if (plaintext.length > 0 && keyword.length > 0) {
+        const encrypted = await encrypt(plaintext, keyword);
+        document.getElementById("output").value = encrypted.slice(0, menu_value);
+    } else {
+        document.getElementById("output").value = "";
+    }
 }
+    
 
 
 
@@ -82,13 +86,17 @@ function copyToClipboard() {
         .writeText(text)
         .then(() => {
             console.log("Text copied to clipboard:", text);
-            document.getElementById("copy-confirm").innerText =
-                "Copied to Clipboard!";
+          
+            
+            /*document.getElementById("copy-confirm").innerText =
+                "Copied to Clipboard!";*/
         })
         .catch((error) => {
             console.error("Failed to copy text to clipboard:", error);
         });
 }
+
+
 
 document.getElementById("eyeicon").addEventListener("click", function () {
     const plaintext = document.getElementById("plaintext");
@@ -99,8 +107,15 @@ document.getElementById("eyeicon").addEventListener("click", function () {
 });
 
 // Event listeners
-document.getElementById("submit").addEventListener("click", generatePassword);
-document.getElementById("copy").addEventListener("click", copyToClipboard);
+document.getElementById("copyimg").addEventListener("click", copyToClipboard);
 document.getElementById("keyword").addEventListener("click", autoFill);
+document.getElementById("keyword").addEventListener("input", generatePassword);
+document.getElementById("plaintext").addEventListener("input", generatePassword);
+document.getElementById("menu").addEventListener("change", generatePassword);
+
+
+document.getElementById("hburger-box").addEventListener("click", (e) => {
+    e.currentTarget.classList.toggle("change");
+});
 
 autoFill();
